@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "foodharbor-d1be4": {
+      "hosting": {
+        "frontend": [
+          "foodharbor-d1be4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "foodharbor-d1be4"
+  }
+}
