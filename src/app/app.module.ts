@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MenuUserComponent } from './menu-user/menu-user.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuUserComponent } from './menu-user/menu-user.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

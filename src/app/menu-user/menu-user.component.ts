@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-user.component.css']
 })
 export class MenuUserComponent {
+  title="Menu User";
 
+  tabList=["Home","Organization",'Donate','Article'];
 }

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'kalam';
+    src: url(./assets/Kalam/Kalam-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'kalam';
+}
