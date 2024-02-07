@@ -16,6 +16,7 @@ import { MenuNgosComponent } from '../menu-ngos/menu-ngos.component';
 import { MenuProfileDonationHistoryComponent } from './menu/menu-profile/menu-profile-donation-history/menu-profile-donation-history.component';
 import { MenuProfileCreditsComponent } from './menu/menu-profile/menu-profile-credits/menu-profile-credits.component';
 import { MenuProfileMyprofileComponent } from './menu/menu-profile/menu-profile-myprofile/menu-profile-myprofile.component';
+import { MenuDonationComponent } from './menu/menu-donation/menu-donation.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MenuProfileMyprofileComponent } from './menu/menu-profile/menu-profile-
     MenuProfileDonationHistoryComponent,
     MenuProfileCreditsComponent,
     MenuProfileMyprofileComponent,
+    MenuDonationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule],
   providers: [],
