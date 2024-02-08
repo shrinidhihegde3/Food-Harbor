@@ -4,7 +4,8 @@
   background-color: rgb(234, 234, 232);
 }
 .block {
-  padding: 50px;
+  padding: 30px;
+  padding-right: 50px;
 }
 p {
   font-size: 12px;
@@ -14,4 +15,5 @@ p {
   background-color: rgb(234, 234, 232);
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
