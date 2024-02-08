@@ -17,12 +17,14 @@ import { MenuProfileDonationHistoryComponent } from './menu/menu-profile/menu-pr
 import { MenuProfileCreditsComponent } from './menu/menu-profile/menu-profile-credits/menu-profile-credits.component';
 import { MenuProfileMyprofileComponent } from './menu/menu-profile/menu-profile-myprofile/menu-profile-myprofile.component';
 import { MenuDonationComponent } from './menu/menu-donation/menu-donation.component';
+import { HeaderModule } from './shared/header/header.module';
+import { FooterModule } from './shared/footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+    //HeaderComponent,
+    //FooterComponent,
     MenuUserComponent,
     LoginComponent,
     MenuHomeComponent,
@@ -35,7 +37,13 @@ import { MenuDonationComponent } from './menu/menu-donation/menu-donation.compon
     MenuProfileMyprofileComponent,
     MenuDonationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    CommonModule,
+    HeaderModule,
+    FooterModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

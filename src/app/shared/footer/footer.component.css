@@ -15,5 +15,7 @@ p {
 }
 .container{
   background-color: rgb(234, 234, 232) ;
-  max-width:none;
+  max-width :3000px;
 }
+
+

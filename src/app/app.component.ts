@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 
 @Component({
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  tabList=["Home","About Us"];
+export class AppComponent implements OnInit{
+  tabList:MenuItem[]=[];
+  ngOnInit(): void {
+      this.tabList=[
+        {
+          label:"home"
+        },
+        {
+          label:"About Us"
+        }
+      ]
+  }
 }
