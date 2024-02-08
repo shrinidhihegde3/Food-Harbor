@@ -1,13 +1,19 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(234, 234, 232);
-  }
-  .block {
-    padding: 50px;
-  }
-  p {
-    font-size: 12px;
-    font-weight: lighter;
-  }
-  
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 234, 232);
+}
+.block {
+  padding: 30px;
+  padding-right: 50px;
+}
+p {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.flex-container {
+  background-color: rgb(234, 234, 232);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

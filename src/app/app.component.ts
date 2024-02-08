@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  tabList=["Home","About Us"];
+  tabList=
+  [
+    {label:'Home', routerLink: '/home'},
+    {label:'About', routerLink: '/about'},
+  ];
 
   isLoggedIn(){
     if(sessionStorage.getItem('user')){

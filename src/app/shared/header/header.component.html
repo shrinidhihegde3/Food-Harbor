@@ -1,22 +1,42 @@
-<div [ngClass]="'top-bar'">
-    <div [ngClass]="'logo'">
-      <img [ngClass]="'logo-img'" [src]="'assets/images/' + logo + '.png'" />
-      <h2 [ngClass]="'logo-title'">
-        {{ logoTitle }}
-      </h2>
-    </div>
-    <div [ngClass]="'tab-container'">
-      <h4 *ngFor="let tab of tabList" [ngClass]="'tabs'">
-        {{ tab }}
-      </h4>
-    </div>
-    <div [ngClass]="'login'" *ngIf="rightCheck === true">
-      <h3>Login</h3>
-      <h3>Sign Up</h3>
-    </div>
-    <div [ngClass]="'login'" *ngIf="rightCheck === false">
-      <img [ngClass]="'profile-img'" [src]="">
-      <h3>Profile</h3>
-    </div>
+<!-- <div class="top-bar">
+  <div [ngClass]="'logo'">
+    <img [ngClass]="'logo-img'" [src]="'assets/images/' + logo + '.png'" />
+    <h2 [ngClass]="'logo-title'">
+      {{ logoTitle }}
+    </h2>
   </div>
-  
+  <div [ngClass]="'tab-container'">
+    <h4 *ngFor="let tab of tabList" [ngClass]="'tabs'">
+      {{ tab }}
+    </h4>
+  </div>
+  <div [ngClass]="'login'" *ngIf="rightCheck === true">
+    <h3>Login</h3>
+    <h3>Sign Up</h3>
+  </div>
+  <div [ngClass]="'login'" *ngIf="rightCheck === false">
+    <img [ngClass]="'profile-img'" [src]="" />
+    <h3>Profile</h3>
+  </div>
+</div> -->
+
+  <p-menubar [model]="tabList">
+    <ng-template  pTemplate="start" >
+      <div [ngClass]="'logo'">
+        <img [ngClass]="'logo-img'" [src]="'assets/images/' + logo + '.png'" />
+        <h2 [ngClass]="'logo-title'">
+          {{ logoTitle }}
+        </h2>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div [ngClass]="'login'" *ngIf="rightCheck === true">
+        <h3>Login</h3>
+        <h3>Sign Up</h3>
+      </div>
+      <div [ngClass]="'login'" *ngIf="rightCheck === false">
+        <img [ngClass]="'profile-img'" [src]="" />
+        <h3>Profile</h3>
+      </div>
+    </ng-template>
+  </p-menubar>

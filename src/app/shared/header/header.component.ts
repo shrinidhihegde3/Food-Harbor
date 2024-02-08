@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { Input } from '@angular/core';
 export class HeaderComponent {
     @Input() logo: string='';
     @Input() logoTitle: string='';
-    @Input() tabList:string[]=[];
+    @Input() tabList:MenuItem[]=[];
     @Input() rightCheck:boolean=true;
     
 }
