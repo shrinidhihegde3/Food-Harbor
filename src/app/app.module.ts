@@ -3,46 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { MenuUserComponent } from './menu-user/menu-user.component';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { MenuHomeComponent } from './menu/menu-home/menu-home.component';
-import { MenuOrganisationsComponent } from './menu/menu-organisations/menu-organisations.component';
-import { MenuArticleComponent } from './menu/menu-article/menu-article.component';
-import { MenuProfileComponent } from './menu/menu-profile/menu-profile.component';
-import { MenuNgosComponent } from '../menu-ngos/menu-ngos.component';
-import { MenuProfileDonationHistoryComponent } from './menu/menu-profile/menu-profile-donation-history/menu-profile-donation-history.component';
-import { MenuProfileCreditsComponent } from './menu/menu-profile/menu-profile-credits/menu-profile-credits.component';
-import { MenuProfileMyprofileComponent } from './menu/menu-profile/menu-profile-myprofile/menu-profile-myprofile.component';
-import { MenuDonationComponent } from './menu/menu-donation/menu-donation.component';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
+import { MenuUserModule } from './menu-user/menu-user.module';
+import { LoginModule } from './login/login.module';
+import { MenuNgosModule } from 'src/app/menu-ngos/menu-ngos.module';
+import { MenuArticleModule } from './menu/menu-article/menu-article.module';
+import { MenuDonationModule } from './menu/menu-donation/menu-donation.module';
+import { MenuHomeModule } from './menu/menu-home/menu-home.module';
+import { MenuOrganisationsModule } from './menu/menu-organisations/menu-organisations.module';
+import { MenuProfileModule } from './menu/menu-profile/menu-profile.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    //HeaderComponent,
-    //FooterComponent,
-    MenuUserComponent,
-    LoginComponent,
-    MenuHomeComponent,
-    MenuOrganisationsComponent,
-    MenuArticleComponent,
-    MenuProfileComponent,
-    MenuNgosComponent,
-    MenuProfileDonationHistoryComponent,
-    MenuProfileCreditsComponent,
-    MenuProfileMyprofileComponent,
-    MenuDonationComponent,
+    
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule, 
     CommonModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    MenuUserModule,
+    LoginModule,
+    MenuNgosModule,
+    MenuArticleModule,
+    MenuDonationModule,
+    MenuHomeModule,
+    MenuOrganisationsModule,
+    MenuProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent],
