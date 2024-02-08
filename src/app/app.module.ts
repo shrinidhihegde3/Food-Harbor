@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+
 
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -15,12 +14,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { firebaseConfig } from '../environments/environment';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from './menu/menu.module';
+import { HeaderModule } from './shared/header/header.module';
+import { FooterModule } from './shared/footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
   ],
   
   imports: [
@@ -28,6 +27,8 @@ import { MenuModule } from './menu/menu.module';
     AppRoutingModule,
     CommonModule,
     MenuModule,
+    HeaderModule,
+    FooterModule,
     
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
