@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   tabList=["Home","About Us"];
+
+  isLoggedIn(){
+    if(sessionStorage.getItem('user')){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
