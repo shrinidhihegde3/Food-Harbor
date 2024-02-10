@@ -10,4 +10,5 @@ export class ProfileComponent {
     sideBarToggler(){
       this.sideBarOpen = !this.sideBarOpen;
     }
+    logo="../../assets/images/logo.jpg";
 }

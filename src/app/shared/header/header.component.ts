@@ -12,14 +12,13 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class HeaderComponent {
   constructor( private authService: AuthService, private router: Router,private appComp: AppComponent) { }
-    // @Input() logo: string='';
     @Input() logoTitle: string='';
     @Input() tabList:MenuItem[]=[];
     @Input() rightCheck:boolean=false;
     @Input() imageUrl: any;
     @Input() profileName: string='';
     
-    logo: string = '../../../assets/images/logo final.03 (1).jpg';
+    logo: string = '../../../assets/images/logo.jpg';
 
     signIn(){
       console.log('button clicked');
@@ -31,7 +30,7 @@ export class HeaderComponent {
     signOut(){
       this.authService.signOut().then(() => {
         this.appComp.isLoggedIn();
-        // this.router.navigate(['/']); 
+        this.router.navigate(['/']); 
       });
     }
 
