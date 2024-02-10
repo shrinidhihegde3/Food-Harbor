@@ -1,4 +1,4 @@
-.container {
+.con{
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(37, 65, 81);
@@ -24,10 +24,6 @@
   cursor: pointer;
   border: 0;
   padding: 1rem 1.5rem;
-}
-.bi bi-grid{
-  color: #fff;
-  font-size: 1.5rem;
 }
 #sidebar.expand {
   width: 260px;
