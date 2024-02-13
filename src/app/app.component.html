@@ -1,4 +1,14 @@
-<app-header  [logoTitle]="'FOODHARBOR'" [tabList]="tabList" [rightCheck]="rightCheck" [imageUrl]="imageUrl" *ngIf="true" [profileName]="profileName"></app-header>
+<ng-container *ngIf="!isProfileRoute()">
+    <app-header [logoTitle]="'FOODHARBOR'" [tabList]="tabList" [rightCheck]="rightCheck" [imageUrl]="imageUrl"
+        *ngIf="true" [profileName]="profileName"></app-header>
+</ng-container>
+
+<ng-container *ngIf="isProfileRoute()">
+    <app-menu-profile-header></app-menu-profile-header>
+</ng-container>
+
 <router-outlet></router-outlet>
-<app-footer *ngIf="rightCheck"></app-footer>
-<app-profile></app-profile>
+
+<ng-container *ngIf="!isProfileRoute()">
+    <app-footer *ngIf="rightCheck"></app-footer>
+</ng-container>

@@ -4,34 +4,33 @@ import { MenuArticleComponent } from './menu-article/menu-article.component';
 import { MenuDonationComponent } from './menu-donation/menu-donation.component';
 import { MenuHomeComponent } from './menu-home/menu-home.component';
 import { MenuOrganisationComponent } from './menu-organisation/menu-organisation.component';
+import { AuthGuard } from '../services/auth.guard';
 
 const routes: Routes = [
 
   {
-    path: 'article', component: MenuArticleComponent
+    path: 'article', component: MenuArticleComponent, canActivate: [AuthGuard]
   },
 
 
   {
-    path: 'donation', component: MenuDonationComponent
+    path: 'donation', component: MenuDonationComponent, canActivate: [AuthGuard]
   },
 
 
   {
-    path: 'home', component: MenuHomeComponent
+    path: 'home', component: MenuHomeComponent, canActivate: [AuthGuard]
   },
 
 
   {
-    path: 'organisation', component: MenuOrganisationComponent
+    path: 'organisation', component: MenuOrganisationComponent, canActivate: [AuthGuard]
   },
 
 
   {
-    path: 'profile', loadChildren: () => import('./menu-profile/menu-profile.module').then(m => m.MenuProfileModule)
+    path: 'profile', loadChildren: () => import('./menu-profile/menu-profile.module').then(m => m.MenuProfileModule) , canActivate: [AuthGuard]
   }
-
-
 
 ];
 

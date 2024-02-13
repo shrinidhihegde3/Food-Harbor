@@ -5,17 +5,20 @@ import { MenuProfileRoutingModule } from './menu-profile-routing.module';
 import { MenuProfileCreditsComponent } from './menu-profile-credits/menu-profile-credits.component';
 import { MenuProfileDonationHistoryComponent } from './menu-profile-donation-history/menu-profile-donation-history.component';
 import { MenuProfileMyprofileComponent } from './menu-profile-myprofile/menu-profile-myprofile.component';
+// import { MenuHeaderComponent } from './menu-header/menu-header.component';
 
 
 @NgModule({
   declarations: [
     MenuProfileCreditsComponent,
     MenuProfileDonationHistoryComponent,
-    MenuProfileMyprofileComponent
+    MenuProfileMyprofileComponent,
+    // MenuHeaderComponent
   ],
   imports: [
     CommonModule,
-    MenuProfileRoutingModule
+    MenuProfileRoutingModule,
+    
   ]
 })
 export class MenuProfileModule { }
