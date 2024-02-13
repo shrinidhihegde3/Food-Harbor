@@ -20,32 +20,9 @@
   </div>
 </div> -->
 
-<<<<<<< Updated upstream
-<p-menubar [model]="tabList">
-  <ng-template pTemplate="start">
-    <div [ngClass]="'logo'">
-      <img [ngClass]="'logo-img'" [src]="logo" />
-      <h2 [ngClass]="'logo-title'">
-        {{ logoTitle }}
-      </h2>
-    </div>
-  </ng-template>
-  <ng-template pTemplate="end">
-    <div [ngClass]="'login'" *ngIf="rightCheck">
-      <button class="login-button" (click)="signIn()">Signin/Login</button>
-    </div>
-    <div [ngClass]="'login'" *ngIf="!rightCheck">
-      <button class="login-button" (click)="signOut()">SignOut</button>
-      <button class="login-button">{{profileName}}</button>
-      <img [ngClass]="'profile-img'" [src]="imageUrl" />
-
-    </div>
-  </ng-template>
-</p-menubar>
-=======
   <p-menubar [model]="tabList">
-    <ng-template  pTemplate="start"  >
-      <div [ngClass]="'logo'" routerLink="/menu/home">
+    <ng-template  pTemplate="start" >
+      <div [ngClass]="'logo'">
         <img [ngClass]="'logo-img'" [src]="logo" />
         <h2 [ngClass]="'logo-title'">
           {{ logoTitle }}
@@ -64,4 +41,3 @@
       </div>
     </ng-template>
   </p-menubar>
->>>>>>> Stashed changes
