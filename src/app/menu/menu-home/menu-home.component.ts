@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class MenuHomeComponent {
 
+  constructor() { }
 
+  ngOnInit(): void {
+  }
 
-  
 }
