@@ -42,7 +42,7 @@ export class AuthService {
       console.log(res);
 
       this.router.navigate(['/menu/home']);
-      sessionStorage.setItem('user', JSON.stringify(res.user));
+      localStorage.setItem('user', JSON.stringify(res.user));
       // this.updateUserData(res.user);
     }, (err) => {
       console.log(err);
@@ -72,11 +72,11 @@ export class AuthService {
   async signOut() {
     await this.afAuth.signOut();
     this.router.navigate(['/']);
-    sessionStorage.removeItem('user');
+    localStorage.removeItem('user');
   }
 
   isLoggedIn() {
-    if (sessionStorage.getItem('user')) {
+    if (localStorage.getItem('user')) {
       return true;
     }
     return false;

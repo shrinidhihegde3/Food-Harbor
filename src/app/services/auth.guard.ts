@@ -16,6 +16,7 @@ export class AuthGuard implements CanActivate {
       map(user => {
         if (user) {
           console.log('User is logged in');
+          console.log(user);
           return true;
         } else {
           console.log('User is not logged in');

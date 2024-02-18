@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   isLoggedIn() {
-    const user = sessionStorage.getItem('user');
+    const user = localStorage.getItem('user');
 
     if (user) {
       this.rightCheck = false;

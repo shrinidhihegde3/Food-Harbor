@@ -9,7 +9,8 @@ export class CardComponent {
 nullUser:string = "../../../../assets/images/nullUser.png";
 
 @Input() title: string | undefined;
-@Input() imgUrl: string | undefined;
+@Input() imgUrl: string | undefined = this.nullUser;
+
 // @Input() title: string | undefined;
 
 }
