@@ -1,0 +1,20 @@
+<!-- <p-card>
+    <div class="container">
+        <img src="https://lh3.googleusercontent.com/a/ACg8ocLjVdZNrJKI8Q_XSeS1K9Goy8cpjUY_Xrp7r3uy1AZH=s96-c" />
+        <p><strong>user1</strong> donated to <strong>abcdefghif organisation</strong></p>
+    </div>
+</p-card> -->
+
+<div class="card-container d-flex">
+    <h2>{{title}}</h2>
+    <div class="cards-container">
+        <div class="card d-flex justify-content-center">
+            <p-card>
+                <div class="container">
+                    <img *ngIf="imgUrl?imgUrl:nullUser" src="{{imgUrl}}"  />
+                    <p><strong>user1</strong> donated to <strong>abcdefghif organisation</strong></p>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>

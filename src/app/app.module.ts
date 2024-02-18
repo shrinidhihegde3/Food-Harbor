@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 import { MenuModule } from './menu/menu.module';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
-import { ProfileModule } from './profile/profile.module';
+import { MenuProfileHeaderModule } from './shared/menu-profile-header/menu-profile-header.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { ProfileModule } from './profile/profile.module';
     MenuModule,
     HeaderModule,
     FooterModule,
-    ProfileModule,
+    MenuProfileHeaderModule,
     
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,

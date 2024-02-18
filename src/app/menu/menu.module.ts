@@ -7,7 +7,7 @@ import { MenuDonationComponent } from './menu-donation/menu-donation.component';
 import { MenuHomeComponent } from './menu-home/menu-home.component';
 import { MenuOrganisationComponent } from './menu-organisation/menu-organisation.component';
 import { MenuProfileModule } from './menu-profile/menu-profile.module';
-
+import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { MenuProfileModule } from './menu-profile/menu-profile.module';
   imports: [
     CommonModule,
     MenuRoutingModule,
-    MenuProfileModule
+    MenuProfileModule,
+    ComponentsModule
   ]
 })
 export class MenuModule { }

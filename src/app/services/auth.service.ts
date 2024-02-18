@@ -41,7 +41,7 @@ export class AuthService {
 
       console.log(res);
 
-      this.router.navigate(['/menu']);
+      this.router.navigate(['/menu/home']);
       sessionStorage.setItem('user', JSON.stringify(res.user));
       // this.updateUserData(res.user);
     }, (err) => {

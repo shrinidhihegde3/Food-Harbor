@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -15,18 +16,26 @@
   margin: 0px;
   padding: 20px;
 }
+
 .logo-title {
   margin: 20px;
   font-weight: bolder;
   font-size: 30px;
+  padding-top: 15px;
+  cursor: pointer;
 }
+
 .logo-img {
-  padding-right: 20px;
+  padding-right: 10px;
   padding-left: 10px;
+  height: 65px;
+  border-radius: 40%;
 }
+
 .logo-title:hover {
   color: rgb(213, 83, 66);
 }
+
 .tab-container {
   display: flex;
   justify-content: space-between;
@@ -34,40 +43,92 @@
   padding: 25px;
   padding-right: 40px;
 }
+
 .tabs {
   padding-right: 40px;
   margin: 0px;
 }
+
 .tabs:hover {
   color: rgb(213, 83, 66);
 }
+
 h3 {
   padding-right: 30px;
   margin: 0px;
 }
+
 h3:hover {
   color: rgb(213, 83, 66);
 }
+
 .login {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 10px;
 }
+
 .logo-title {
   margin: 0px;
   font-weight: bolder;
 }
+
 :host ::ng-deep .p-menubar {
   background-color: rgb(37, 65, 81);
   color: white;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 :host ::ng-deep .p-menubar .p-menuitem-link {
   color: white;
-  padding: 0px 20px;
+  padding: 15px 15px 0px 0px;
+  text-decoration: none;
 }
+
 :host ::ng-deep .p-menubar .p-menuitem-link:hover {
   color: rgb(213, 83, 66);
+}
+
+.login-button {
+  background-color: rgb(20, 35, 43);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.login-button:hover {
+  background-color: rgb(16, 30, 37);
+}
+
+.profile-img {
+  width: 55px;
+  /* Adjust width as needed */
+  /* height: 55; */
+  /* Adjust height as needed */
+  border-radius: 50%;
+  /* Make the image round */
+  border: 2px solid #fff;
+  /* Add a white border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow effect */
+}
+
+/* Optional: Center the image */
+.profile-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.p-menubar dl ol ul{
+  padding-top: 10px;
 }
