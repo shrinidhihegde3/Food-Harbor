@@ -75,7 +75,7 @@ h3:hover {
 }
 
 :host ::ng-deep .p-menubar {
-  background-color: rgb(37, 65, 81);
+  background-color: rgb(0, 31, 26);
   color: white;
   justify-content: center;
   flex-wrap: wrap;
@@ -92,7 +92,7 @@ h3:hover {
 }
 
 .login-button {
-  background-color: rgb(20, 35, 43);
+  background-color: rgb(0, 31, 26);
   border: none;
   color: white;
   padding: 15px 32px;
