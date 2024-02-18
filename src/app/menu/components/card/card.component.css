@@ -1,45 +1,45 @@
-.container img, .container p {
-    display: inline-block;
+.container img,
+.container p {
+  display: inline-block;
 }
 
 p {
-    margin-left: 10px;
-    font-size: 18px;
+  margin-left: 10px;
+  font-size: 18px;
 }
 
 .container img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .card-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card {
-    height: 10%;
-    box-shadow: rgb(154, 149, 149) 0px 0px 10px 0px;
-    border-radius: 8px;
-    margin: 15px;
-    padding-top: 5px;
+  height: 10%;
+  box-shadow: rgb(154, 149, 149) 0px 0px 0px 0px;
+  border-radius: 8px;
+  margin: 15px;
+  padding-top: 5px;
 }
 
 h2 {
-    margin: 20px;
+  margin: 20px;
 }
 
 .cards-container {
-    height: 80vh;
-    width: 60%;
-    border-radius: 15px;
-    scroll-behavior: auto;
-    box-shadow: rgb(154, 149, 149) 0px 0px 10px 0px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
-
+  height: 30vh;
+  width: 60%;
+  border-radius: 15px;
+  scroll-behavior: auto;
+  box-shadow: rgb(154, 149, 149) 0px 0px 10px 0px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
