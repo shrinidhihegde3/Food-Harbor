@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-donation.component.css']
 })
 export class MenuDonationComponent {
-
+    showdialogbox: boolean = false;
+    showDialog() {
+        this.showdialogbox = !this.showdialogbox;
+    }  
 }
