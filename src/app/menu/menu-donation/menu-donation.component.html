@@ -11,8 +11,7 @@
     </div>
     <div class="screen-container" >
        <div class="donation-container" *ngIf="showDonation">
-        <app-donate-card [title]="'Donation1'"></app-donate-card>
-        <app-donate-card [title]="'Donation2'"></app-donate-card> 
+            <app-donation></app-donation>
        </div>
         <div class="chat-container" *ngIf="showChat">
             <app-chat></app-chat>
