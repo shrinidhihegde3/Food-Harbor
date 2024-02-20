@@ -8,12 +8,12 @@ import { MenuHomeComponent } from './menu-home/menu-home.component';
 import { MenuOrganisationComponent } from './menu-organisation/menu-organisation.component';
 import { MenuProfileModule } from './menu-profile/menu-profile.module';
 import { ComponentsModule } from './components/components.module';
+import { MenuDonationModule } from './menu-donation/menu-donation.module';
 
 
 @NgModule({
   declarations: [
     MenuArticleComponent,
-    MenuDonationComponent,
     MenuHomeComponent,
     MenuOrganisationComponent,
   ],
@@ -21,7 +21,8 @@ import { ComponentsModule } from './components/components.module';
     CommonModule,
     MenuRoutingModule,
     MenuProfileModule,
-    ComponentsModule
+    ComponentsModule,
+    MenuDonationModule
   ]
 })
 export class MenuModule { }

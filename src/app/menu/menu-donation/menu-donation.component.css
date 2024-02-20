@@ -1,0 +1,62 @@
+.tab-container {
+  border-radius: 5px;
+  border-color: rgb(0, 31, 28);
+  border-style: solid;
+  border-width: 2px;
+  width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tabs {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+:host ::ng-deep .p-button {
+  background-color: transparent;
+  border-width: 0px 0px 0px 0px;
+  color: rgb(0, 31, 28);
+  font-size: 25px;
+}
+:host ::ng-deep .p-button-label {
+  padding: 10px;
+}
+:host ::ng-deep .donate .p-button:hover {
+  background-color: rgb(0, 31, 28);
+  border: 0px;
+  color: white;
+}
+:host ::ng-deep .chat .p-button:hover {
+  background-color: rgb(0, 31, 28);
+  border: 0px;
+  color: white;
+}
+:host ::ng-deep .add-button .p-button {
+  background-color: rgb(0, 31, 28);
+  border: 0px;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+:host ::ng-deep .chat .p-button {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 0px 2px 0px rgb(0, 31, 28);
+}
