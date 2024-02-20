@@ -1,0 +1,42 @@
+<p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '85vw' }">
+    <ng-template pTemplate="header">
+        <h2>Fill up the list to donate</h2>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <form>
+            <div class="description-class">
+                <h4>Food description</h4>
+                <input type="text" pInputText placeholder="Enter the food description" class="input" />
+            </div>
+            <div class="value-class">
+                <h4>Approaximate quantity in kgs</h4>
+                <input type="text" pInputText placeholder="Enter the quantity in kgs" class="input" />
+            </div>
+            <div class="photo-class">
+                <h4>Upload the photo (Optional)</h4>
+                <p-fileUpload mode="basic" chooseLabel="Choose the file" name="" accept="image/*"
+                    styleClass="input"></p-fileUpload>
+            </div>
+            <div class="pickup-class">
+                <h4>Pickup date</h4>
+                <input type="date" pInputText placeholder="Enter the pickup date" class="input" />
+            </div>
+            <div class="pickup-time-class">
+                <h4>Pickup time</h4>
+                <input type="time" pInputText placeholder="Enter the pickup time" class="input" />
+            </div>
+            <div class="expire-class">
+                <h4>Approximate Expiry date</h4>
+                <input type="date" pInputText placeholder="Enter the expiry date" class="input" />
+            </div>
+            <div class="instruct-class">
+                <h4>Special Instructions</h4>
+                <textarea pInputTextarea placeholder="Enter the instructions" class="input"></textarea>
+            </div>
+        </form>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <p-button label="Donate" class="donate-button" (onClick)="visible = false"></p-button>
+        <p-button label="Cancel" class="cancel-button" (onClick)="visible = false"></p-button>
+    </ng-template>
+</p-dialog>

@@ -1,0 +1,19 @@
+.card-header {
+  background-color: hsl(210, 17%, 98%);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+.card {
+  width: 100%;
+  background-color: white;
+  margin: 10px;
+}

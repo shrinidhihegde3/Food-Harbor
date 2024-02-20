@@ -1,0 +1,73 @@
+:host ::ng-deep .p-dialog {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: rgb(0, 31, 28);
+  border-style: solid;
+  border-width: 2px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgb(0, 31, 28);
+}
+:host ::ng-deep .p-chips {
+  padding: 10px;
+  border-width: 10px;
+  border-color: rgb(0, 31, 28);
+}
+:host ::ng-deep .p-chips-token {
+  color: rgb(0, 31, 28);
+  border-color: rgb(0, 31, 28);
+  margin: 15px;
+}
+:host ::ng-deep .p-chips-token-icon {
+  color: rgb(0, 31, 28);
+  padding-left: 5px;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: rgb(0, 31, 28);
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.description-class {
+  padding: 10px;
+}
+.value-class {
+  padding: 10px;
+}
+.photo-class {
+  padding: 10px;
+}
+.pickup-class {
+  padding: 10px;
+}
+.pickup-time-class{
+    padding: 10px;
+}
+.expire-class {
+  padding: 10px;
+}
+.instruct-class{
+    padding: 10px;
+}
+:host ::ng-deep .p-fileUpload{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(0, 31, 28);
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+:host ::ng-deep .p-button:hover {
+  background-color: rgb(0, 31, 28);
+  border: 10px;
+  color: white;
+}
