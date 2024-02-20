@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent {
-
+    people=[
+        {
+            name: 'John',
+        },
+        {
+            name: 'Jane',
+        },
+        {
+            name: 'John',
+        },
+        {
+            name: 'Jane',
+        }
+    ]
 }

@@ -1,0 +1,35 @@
+.messages-container {
+ height:auto; 
+ overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+}
+.col-md-4 {
+  padding: 0;
+}
+.col-md-8 {
+  padding: 0;
+}
+.card {
+  margin: 0;
+}
+.list-group {
+  height: 360px;
+}
+.list-group-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.img-thumbnail {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 0px;
+}
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.card {
+    min-height : 500px;
+}
