@@ -1,16 +1,16 @@
-<div class="card">
-    <div class="card-header">
+<div class="card" *ngFor="let donation of donationData">
+    <div class="card-header" >
         <h3>{{title}}</h3>
         <h5>Progress:{{progress}}</h5>
     </div>
     <div class="card-body">
-        <ul>
-            <li>Food description:</li>
-            <li>Quantity:</li>
-            <li>Pickup date:</li>
-            <li>Pickup time:</li>
-            <li>Expiry date:</li>
-            <li>Special Instructions:</li>
+        <ul >
+            <li>Food description: {{donation.description}} </li>
+            <li>Quantity: {{donation.Quantity}}</li>
+            <li>Pickup date: {{donation.pickupDate}}</li>
+            <li>Pickup time: {{donation.pickupTime}}</li>
+            <li>Expiry date: {{donation.expiryDate}}</li>
+            <li>Special Instructions: {{donation.instruction}}</li>
         </ul>
     </div>
     <div class="card-footer">

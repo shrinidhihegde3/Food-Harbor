@@ -11,7 +11,6 @@ export interface User {
 }
 
 export interface Donation {
-   id: string | null | undefined;
    description: string;
    quantity: number;
    pickupDate: Date;
