@@ -1,1 +1,16 @@
-<p>menu-article works!</p>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let article of articles">
+      <div class="card">
+        <img [src]="article.urlToImage" alt="Card image cap" width="100%" />
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <p class="card-text">{{ article.description }}</p>
+        </div>
+        <div class="card-footer">
+          <a href="{{ article.url }}" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
