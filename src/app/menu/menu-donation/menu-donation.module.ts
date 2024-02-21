@@ -10,9 +10,10 @@ import { DonateCardComponent } from './donation/donate-card/donate-card.componen
 import { DonateFormComponent } from './donation/donate-form/donate-form.component';
 import { DialogModule } from 'primeng/dialog';
 import { ChipsModule } from 'primeng/chips';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FileUploadModule } from 'primeng/fileupload';
 import { CalendarModule } from 'primeng/calendar';
+import { MessagesModule } from 'primeng/messages';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { CalendarModule } from 'primeng/calendar';
     ChipsModule,
     FormsModule,
     FileUploadModule,
-    CalendarModule
+    CalendarModule,
+    MessagesModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MenuDonationComponent

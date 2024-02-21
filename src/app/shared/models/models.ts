@@ -9,3 +9,14 @@ export interface User {
     isOrganisation: boolean;
     emailVerified: boolean;
  }
+
+ export interface Donation {
+    description: string;
+    quantity: number;
+    pickupDate: Date;
+    photo: string;
+    pickupTime: string;
+    expiryDate: Date;
+    instruction: string;
+    
+ }
