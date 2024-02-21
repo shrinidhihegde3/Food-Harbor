@@ -1,0 +1,29 @@
+/* .card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    height: 10%;
+    box-shadow: rgb(154, 149, 149) 0px 0px 10px 0px;
+    border-radius: 8px;
+    margin: 15px;
+    padding-top: 5px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.cards-container {
+    height: 80vh;
+    width: 80%;
+    border-radius: 15px;
+    scroll-behavior: auto;
+    box-shadow: rgb(154, 149, 149) 0px 0px 10px 0px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+
+  } */

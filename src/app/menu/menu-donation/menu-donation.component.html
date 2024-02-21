@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="tabs">
+      <div class="tab-container">
+        <div class="donate-class">
+          <p-button label="DONATIONS" class="donate" (onClick)="showDonate()"></p-button>
+        </div>
+        <div class="Chat-class">
+          <p-button label="CHAT" class="chat" (onClick)="showChatBox()"></p-button>
+        </div>
+      </div>
+    </div>
+    <div class="screen-container" >
+       <div class="donation-container" *ngIf="showDonation">
+            <app-donation></app-donation>
+       </div>
+        <div class="chat-container" *ngIf="showChat">
+            <app-chat></app-chat>
+        </div>
+
+    </div>
+    <app-donate-form [visible]="showdialogbox"></app-donate-form>
+    <div class="">
+      <p-button label="+" class="add-button" (onClick)="showDialog()"></p-button>
+    </div>
+  </div>
