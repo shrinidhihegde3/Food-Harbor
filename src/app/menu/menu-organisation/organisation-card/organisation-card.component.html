@@ -1,16 +1,31 @@
 <div class="card">
-    <div class="card-header">
-        <i class="bi bi-bank"></i>
-        <h3>{{organisation}}</h3>
+  <div class="row">
+    <div class="col-md-2">
+      <img
+        src="https://via.placeholder.com/20"
+        alt="Card image cap"
+        width="100%"
+        class="img"
+      />
     </div>
-    <div class="card-body">
-        <p>{{description}}</p>
-        <p>{{address}}</p>
-        <p>{{email}}</p>
+    <div class="col-md-10">
+      <div class="card-header">
+        <div class="title-container">
+            <h3>{{ organisation }}</h3>
+            <i class="bi bi-bank"></i>
+        </div>
+        <p class="card-text"><i class="bi bi-star-fill"></i> {{ Ratings }}</p>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><i class="bi bi-text-paragraph"></i> {{ description }}</p>
+
+        <p class="card-text"><i class="bi bi-geo-alt-fill"></i> {{ address }}</p>
+        <p class="card-text">{{ email }}</p>
+        <p class="card-text"><i class="bi bi-telephone-fill"></i> {{ phone }}</p>
+      </div>
+      <div class="card-footer">
+        <a href="{{ link }}" class="btn">Visit Website</a>
+      </div>
     </div>
-    <div class="card-footer">
-        <a href="{{link}}" class="btn">Visit Website</a>
-        <p>Contact No: {{phone}}</p>
-        <p>{{Ratings}}</p>
-    </div>
+  </div>
 </div>

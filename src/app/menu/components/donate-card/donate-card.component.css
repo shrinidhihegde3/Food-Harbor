@@ -1,12 +1,22 @@
 .card-header {
-  background-color: hsl(210, 17%, 98%);
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #dee2e6;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  background-color: transparent;
+  border-color: transparent;
   align-items: center;
+  justify-content: space-between;
+}
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border-color: transparent;
+  align-items: center;
+  justify-content: space-between;
 }
 h3 {
+  padding-top: 10px;
+  padding-right: 10px;
   margin: 0;
 }
 h5 {
@@ -16,19 +26,24 @@ h5 {
   width: 100%;
   background-color: white;
   margin: 10px;
+  padding: 10px;
+  border-width: 2px;
+  border-color: rgb(0, 31, 28);
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
 }
-:host ::ng-deep .view-details .p-button {
+.col-md-3 {
+  padding: 0;
+}
+.col-md-9 {
+  padding: 0;
+}
+.img {
+  height: 100%;
+  width: 100%;
+}
+.btn {
   background-color: transparent;
-  border-radius: 10px;
   color: rgb(0, 31, 28);
-  font-size: 15px;
-  margin: 5px;
-}
-:host ::ng-deep .view-details .p-button:hover {
-  background-color: rgb(0, 31, 28);
-  border: 0px;
-  color: white;
-}
-:host ::ng-deep .view-details .p-button-label {
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
 }
