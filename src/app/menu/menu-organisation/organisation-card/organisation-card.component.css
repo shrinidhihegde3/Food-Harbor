@@ -1,0 +1,9 @@
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}

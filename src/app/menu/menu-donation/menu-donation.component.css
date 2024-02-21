@@ -44,7 +44,7 @@
   border: 0px;
   color: white;
   font-size: 40px;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
   border-radius: 50%;
