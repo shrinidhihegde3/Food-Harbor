@@ -1,24 +1,17 @@
-.container-fluid {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.background-image {
-  background-size: auto;
-  background-position: center;
-  position: relative;
-  width: 900%;
-  height: 100%;
-}
 .img-fluid {
-  width: 1800px;
-  height: 700px;
+  width: 2000px;
+  height: 900px;
 }
 
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
@@ -38,30 +31,9 @@
   font-family: sans-serif;
   color: black;
 }
-/* .box1 {
-    background-color: rgb( 234,234,232 );
-    align-items: center;
-    text-align: center;
-  }
-  .box1 h3{
-    font-style: normal normal normal 32px/1.4em lulo-clean-w01-one-bold,lulo-clean-w05-one-bold,sans-serif;;
-    color: blue;
-    letter-spacing:0.0em;
-    font-size: 2em;
-  }
-  .box2{
-    background-color: #FFB993;
-    align-items: center;
-    text-align: center;
-  }
-  .box2 h3{
-    font-family: normal normal normal 32px/1.4em lulo-clean-w01-one-bold,lulo-clean-w05-one-bold,sans-serif;
-    font-size: 2em;
-    color:white;
-  } */
 
 .card {
-  padding: 30px;
+  padding: 20px;
   background-color: rgb(234, 234, 232);
 }
 .card-header {
@@ -72,67 +44,47 @@
   text-align: center;
   background-position: center;
   font-weight: bold;
+  background-color: transparent;
+  border: none;
 }
 .card-body {
-  padding: 30px;
-}
-
-:host ::ng-deep .pledge .p-card {
-  padding: 30px;
-  background-color: #ffb993;
-  width: 650px;
-  height: 434px;
-}
-:host ::ng-deep .pledge .p-card-header {
-  font-style: sans-serif;
-  color: black;
-  letter-spacing: 0em;
-  font-size: 2em;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1;
-}
-:host ::ng-deep .pledge .p-card-content {
-  align-content: center;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  :host ::ng-deep .pledge .p-card-content p-button {
-    padding: 70px;
-  }
-
-  /* <p-button-icon="text-align: center;">Centered Button</p-button-icon>
-
-<button class="center">Centered Button</button> */
-  /* <button class="centered-button">Button Text</button> */
-}
-
-:host ::ng-deep .about .p-card {
-  padding: 30px;
-  background-color: rgb(69, 178, 157);
-  width: 150+0px;
-}
-:host ::ng-deep .about .p-card-header {
-  font-style: sans-serif;
-  color: rgb(20, 3, 3);
-  letter-spacing: 0em;
-  font-size: 2em;
-  text-align: center;
-  font-weight: bold;
-}
-:host ::ng-deep .about .p-card-content {
-  padding: 30px;
-  font-size: 1.5em;
   padding: 20px;
+  text-align: center;
 }
 .overlay-container {
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 40%;
   transform: translate(-40%, -40%);
+  width: 80%;
 }
-.row{
-  margin-top:16rem !important
+
+.col-md-8 {
+  padding: 0px;
+}
+.col-md-4 {
+  padding: 0px;
+}
+.our-mission {
+  background-color: rgb(234, 234, 232);
+  min-height: 40vh;
+  height: 100%;
+}
+.pledge {
+  background-color: #ffb993;
+  min-height: 40vh;
+  height: 100%;
+}
+.about-us {
+  background-color: rgb(69, 178, 157);
+  min-height: 30vh;
+  height: 100%;
+}
+.btn {
+  background-color: #ffb993;
+  color: black;
+  font-size: 1.5em;
+}
+.about-uss {
+  margin-top: 18rem !important;
 }
