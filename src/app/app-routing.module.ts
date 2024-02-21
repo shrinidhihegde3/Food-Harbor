@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './services/auth.guard';
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
+import { GeneralHomeComponent } from './general-home/general-home/general-home.component';
 
 
 const routes: Routes = [
@@ -10,7 +11,7 @@ const routes: Routes = [
   },
 
   {
-    path: '', component: LoginComponent
+    path: '', component: GeneralHomeComponent
   }
 ];
 
