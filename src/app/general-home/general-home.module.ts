@@ -2,26 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 
-import { GeneralHomeComponent } from './general-home.component';
-import { HeaderComponent } from '../shared/header/header.component';
-import { FooterComponent } from '../shared/footer/footer.component';
-import { CardModule } from 'primeng/card';
+import { GeneralHomeComponent } from './general-home/general-home.component';
 import { ImageModule } from 'primeng/image';
+import { CardModule } from 'primeng/card';
 
 
 
 @NgModule({
   declarations: [
     GeneralHomeComponent,
-    //HeaderComponent,
-    //FooterComponent
   ],
   imports: [
     CommonModule,
     ButtonModule,
-    CardModule,
-    ImageModule
+    ImageModule,
+    CardModule
   ],
-  exports:[GeneralHomeComponent]
+  exports: [GeneralHomeComponent]
 })
 export class GeneralHomeModule { }
