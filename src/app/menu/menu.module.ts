@@ -9,11 +9,11 @@ import { MenuOrganisationComponent } from './menu-organisation/menu-organisation
 import { MenuProfileModule } from './menu-profile/menu-profile.module';
 import { ComponentsModule } from './components/components.module';
 import { MenuDonationModule } from './menu-donation/menu-donation.module';
+import { MenuArticleModule } from './menu-article/menu-article.module';
 
 
 @NgModule({
   declarations: [
-    MenuArticleComponent,
     MenuHomeComponent,
     MenuOrganisationComponent,
   ],
@@ -22,7 +22,8 @@ import { MenuDonationModule } from './menu-donation/menu-donation.module';
     MenuRoutingModule,
     MenuProfileModule,
     ComponentsModule,
-    MenuDonationModule
+    MenuDonationModule,
+    MenuArticleModule
   ]
 })
 export class MenuModule { }
