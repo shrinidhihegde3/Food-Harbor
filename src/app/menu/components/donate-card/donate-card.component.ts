@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class DonateCardComponent {
     @Input() progress: string | undefined;
     @Input() title: string | undefined;
-}
+    @Input() donationData: any;
+  }

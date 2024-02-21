@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Observable, map, from } from 'rxjs';
 import { Donation } from 'src/app/shared/models/models';
 
 @Injectable({
@@ -30,20 +31,29 @@ export class MenuDonationService {
     });
   }
 
-  upLoadDonation(donation: Donation): Promise<void> {
-    return new Promise((resolve, reject) => {
-      if (donation) {
-        this.fireStore.collection('donations').add(donation)
-          .then(() => {
-            resolve();
-          })
-          .catch((error) => {
-            reject('Error adding donation to Firestore: ' + error);
-          });
-      } else {
-        reject('Donation object is null or undefined.');
-      }
-    });
+  async upLoadDonation(donation: Donation, docId: any): Promise<void> {
+    if (!donation) {
+      throw new Error('Donation object is null or undefined.');
+    }
+
+    try {
+      await this.fireStore.collection('users').doc(docId).collection('donations').add(donation);
+    } catch (error) {
+      throw new Error('Error adding donation to Firestore: ' + error);
+    }
+  }
+
+  getDonationsByUser(docId: any): Observable<any[]> {
+    return from(
+      this.fireStore.collection("users").doc(docId).collection("donations").get()
+    ).pipe(
+      map(snapshot => {
+        const donations: any[] = [];
+        snapshot.forEach(doc => {
+          donations.push({ id: doc.id, ...doc.data() });
+        });
+        return donations;
+      })
+    );
   }
 }
-
