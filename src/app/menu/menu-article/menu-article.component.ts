@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuArticleService } from './services/menu-article.service';
 
 @Component({
   selector: 'app-menu-article',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-article.component.css']
 })
 export class MenuArticleComponent {
+    constructor(private service:MenuArticleService) { }
 
+    articles:any = [];
+    
+    ngOnInit() {
+      this.service.getArticles().subscribe((data: any) => {
+        console.log(data);
+        this.articles = data.articles;
+      });
+    }
 }
