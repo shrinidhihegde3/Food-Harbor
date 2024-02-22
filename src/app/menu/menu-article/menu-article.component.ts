@@ -7,13 +7,14 @@ import { MenuArticleService } from './services/menu-article.service';
   styleUrls: ['./menu-article.component.css']
 })
 export class MenuArticleComponent {
-    constructor(private service:MenuArticleService) { }
+    constructor(private _articleService:MenuArticleService) { }
 
     articles:any = [];
     realArticles:any = [];
     
     ngOnInit() {
-      this.service.getArticles().subscribe((data: any) => {
+      this._articleService.getArticles().subscribe((data: any) => {
+        console.log(data);
         this.articles = data.articles;
         this.realArticles = this.articles.filter((article: any) => {
           return article.description !== null && article.urlToImage !== null;

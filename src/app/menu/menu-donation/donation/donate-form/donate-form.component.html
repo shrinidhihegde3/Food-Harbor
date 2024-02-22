@@ -3,40 +3,51 @@
         <h2>Fill up the list to donate</h2>
     </ng-template>
     <ng-template pTemplate="content">
-        <form>
+        <form (ngSubmit)="onSubmit()">
             <div class="description-class">
                 <h4>Food description</h4>
-                <input type="text" pInputText placeholder="Enter the food description" class="input" />
+                <input type="text" placeholder="Enter the food description" class="input"
+                    [(ngModel)]="donation.description" name="description" required />
+                <!-- <p-messages *ngIf="donation.description" severity="error">Description is required.</p-messages> -->
             </div>
             <div class="value-class">
-                <h4>Approaximate quantity in kgs</h4>
-                <input type="text" pInputText placeholder="Enter the quantity in kgs" class="input" />
+                <h4>Approximate quantity in kgs</h4>
+                <input type="number" placeholder="Enter the quantity in kgs" class="input"
+                    [(ngModel)]="donation.quantity" name="quantity" required min="0" [ngModelOptions]="{standalone: true}" />
+                <!-- <p-messages *ngIf="donation.quantity" severity="error">Quantity must be a positive number.</p-messages> -->
             </div>
             <div class="photo-class">
                 <h4>Upload the photo (Optional)</h4>
-                <p-fileUpload mode="basic" chooseLabel="Choose the file" name="" accept="image/*"
-                    styleClass="input"></p-fileUpload>
+                <p-fileUpload mode="basic" chooseLabel="Choose the file" name="upload" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" styleClass="input"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
             </div>
             <div class="pickup-class">
                 <h4>Pickup date</h4>
-                <input type="date" pInputText placeholder="Enter the pickup date" class="input" />
+                <input type="date" placeholder="Enter the pickup date" class="input" [(ngModel)]="donation.pickupDate"
+                name="pickupDate" [ngModelOptions]="{standalone: true}" required />
+                <!-- <p-messages *ngIf="donation.pickupDate" severity="error">Pickup date is required.</p-messages> -->
             </div>
             <div class="pickup-time-class">
                 <h4>Pickup time</h4>
-                <input type="time" pInputText placeholder="Enter the pickup time" class="input" />
+                <input type="time" placeholder="Enter the pickup time" class="input" [(ngModel)]="donation.pickupTime"
+                name="pickupTime"  [ngModelOptions]="{standalone: true}" required />
+                <!-- <p-messages *ngIf="donation.pickupTime" severity="error">Pickup time is required.</p-messages> -->
             </div>
             <div class="expire-class">
                 <h4>Approximate Expiry date</h4>
-                <input type="date" pInputText placeholder="Enter the expiry date" class="input" />
+                <input type="date" placeholder="Enter the expiry date" class="input" [(ngModel)]="donation.expiryDate"
+                name="expiryDate"  [ngModelOptions]="{standalone: true}" required />
+                <!-- <p-messages *ngIf="donation.expiryDate" severity="error">Expiry date is required.</p-messages> -->
             </div>
             <div class="instruct-class">
                 <h4>Special Instructions</h4>
-                <textarea pInputTextarea placeholder="Enter the instructions" class="input"></textarea>
+                <textarea placeholder="Enter the instructions" class="input" [(ngModel)]="donation.instruction"
+                name="instruction"  [ngModelOptions]="{standalone: true}"></textarea>
             </div>
+
+            <p-button label="Donate" type="submit"></p-button>
+            <p-button label="Cancel" class="cancel-button" (click)="onCancel()"></p-button>
+
         </form>
-    </ng-template>
-    <ng-template pTemplate="footer">
-        <p-button label="Donate" class="donate-button" (onClick)="visible = false"></p-button>
-        <p-button label="Cancel" class="cancel-button" (onClick)="visible = false"></p-button>
     </ng-template>
 </p-dialog>

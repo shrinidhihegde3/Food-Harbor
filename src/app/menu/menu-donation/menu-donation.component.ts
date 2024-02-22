@@ -10,7 +10,7 @@ export class MenuDonationComponent {
   showDialog() {
     this.showdialogbox = !this.showdialogbox;
   }
-  showDonation: boolean = false;
+  showDonation: boolean = true;
   showChat: boolean = false;
   showDonate() {
     this.showDonation = true;

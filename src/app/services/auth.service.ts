@@ -38,12 +38,10 @@ export class AuthService {
 
   googleSignin() {
     return this.afAuth.signInWithPopup(new GoogleAuthProvider()).then((res) => {
-
       console.log(res);
-
       this.router.navigate(['/menu/home']);
       localStorage.setItem('user', JSON.stringify(res.user));
-      // this.updateUserData(res.user);
+      this.updateUserData(res.user);
     }, (err) => {
       console.log(err);
     });
@@ -52,27 +50,42 @@ export class AuthService {
   updateUserData(user: User | any) {
     // Sets user data to firestore on login
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+    console.log("updateuserdata");
 
-    const data = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      address: user.address,
-      phoneNo: user.phoneNo,
-      residents: user.residents,
-      isOrganisation: user.isOrganisation,
-      emailVerified: user.emailVerified
-    }
-
-    return userRef.set(data, { merge: true })
-
+    userRef.get().subscribe(docSnapshot => {
+      if (!docSnapshot.exists) {
+        // User is new, update the data
+        const data = {
+          uid: user.uid,
+          email: user.email,
+          displayName: user.displayName,
+          photoURL: user.photoURL,
+          address: user?.address || null,
+          phoneNo: user?.phoneNo || null,
+          residents: user?.residents || null,
+          isOrganisation: user?.isOrganisation || null,
+          emailVerified: user?.emailVerified || 1
+        };
+  
+        userRef.set(data, { merge: true })
+          .then(() => console.log("User data updated successfully"))
+          .catch(error => console.error("Error updating user data: ", error));
+      } else {
+        console.log("User already exists, no update needed");
+      }
+    });
   }
 
   async signOut() {
     await this.afAuth.signOut();
     this.router.navigate(['/']);
     localStorage.removeItem('user');
+  }
+
+  async getUserEmail() {
+    return this.afAuth.currentUser.then((user) => {
+      return user;
+    });
   }
 
   isLoggedIn() {
