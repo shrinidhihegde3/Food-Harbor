@@ -19,6 +19,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { MenuProfileHeaderModule } from './shared/menu-profile-header/menu-profile-header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GeneralHomeModule } from './general-home/general-home.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { GeneralHomeModule } from './general-home/general-home.module';
     FooterModule,
     MenuProfileHeaderModule,
     GeneralHomeModule,
+    AboutModule,
     
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
