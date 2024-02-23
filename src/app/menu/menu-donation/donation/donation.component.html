@@ -1,2 +1,20 @@
-<app-donate-card [title]="'Donation1'" [donationData]="donationData"></app-donate-card>
+
+<div class="container" *ngFor="let donation of donations">
+  <app-donate-card
+    [description]="donation.description"
+    [expiry]="donation.expiry"
+    [progress]="donation.progress"
+    [image]="donation.image"
+    [pickup]="donation.pickup"
+    [pickuptime]="donation.pickuptime"
+    [Quantity]="donation.Quantity"
+    [special]="donation.special"
+    [title]="donation.title"
+    [acceptedBy]="donation.acceptedBy"
+  >
+  </app-donate-card>
+</div>
+
+<!-- <app-donate-card [title]="'Donation1'" [donationData]="donationData"></app-donate-card> -->
 <!-- <app-donate-card [title]="'Donation2'"></app-donate-card> -->
+
