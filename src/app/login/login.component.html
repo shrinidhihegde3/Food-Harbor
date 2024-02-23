@@ -1,1 +1,33 @@
-<p>login works!</p>
+<form [formGroup]="loginForm">
+  <!-- <div class="container"> -->
+    <div class="header">
+  <p-card header="Login" class="card-container">
+    <br/>
+    <div class="field">
+      <label for="email">Email:   </label>
+      <input type="text" pInputText formControlName="email" class="w-full" name="email"
+        placeholder="Enter your email" />
+  </div> 
+    <br/>
+    <div class="field">
+      <label for="Name">Name:     </label>
+      <input type="text" pInputText formControlName="name" class="w-full" name="name" placeholder="Enter your name" />
+    </div>
+    <br/>
+    <div class="field">
+      <label for="phoneno">Phone No:     </label>
+      <input type="text" pInputText formControlName="phoneno" class="w-full" name="phoneno"
+        placeholder="Enter your phone number" />
+    </div>
+    <br/>
+    <div class="field">
+      <label for="address">Address:     </label>
+      <input type="text" pInputText formControlName="address" class="w-full" name="address"
+        placeholder="Enter your address" />
+    </div>
+    <br/>
+    <p-button label="SUBMIT" styleClass="w-full"></p-button>
+  </p-card>
+  </div> 
+<!-- </div> -->
+</form>

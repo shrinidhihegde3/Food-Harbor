@@ -15,6 +15,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { firebaseConfig } from '../environments/environment';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from './menu/menu.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { MenuModule } from './menu/menu.module';
     AppRoutingModule,
     CommonModule,
     MenuModule,
-    
+    LoginModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
