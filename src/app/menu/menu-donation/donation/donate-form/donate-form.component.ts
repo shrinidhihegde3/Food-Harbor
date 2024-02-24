@@ -23,7 +23,15 @@ export class DonateFormComponent {
     photo: '',
     pickupTime: '',
     expiryDate: new Date(),
-    instruction: ''
+    instruction: '',
+    approached: [
+      {
+        uid: '',
+        name: '',
+        profileImg: ''
+      }
+    ],
+    progress: false
   };
 
   onUpload(event: any) {
@@ -38,6 +46,7 @@ export class DonateFormComponent {
     this.donation.photo = uploadedFile;
     const user = await this._authService.getUserEmail();
     // console.log('User:', user?.email);
+    this.donation.progress = true;
     await this._donationService.upLoadDonation(this.donation, user?.uid).then(() => {
       this.visible = false;
     });
@@ -54,7 +63,15 @@ export class DonateFormComponent {
       photo: '',
       pickupTime: '',
       expiryDate: new Date(),
-      instruction: ''
+      instruction: '',
+      approached: [
+        {
+          uid: '',
+          name: '',
+          profileImg: ''
+        }
+      ],
+      progress: false
     };
   }
 }

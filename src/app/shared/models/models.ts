@@ -18,5 +18,12 @@ export interface Donation {
    pickupTime: string;
    expiryDate: Date;
    instruction: string;
-
+   approached: [
+      {
+         uid: string;
+         name: string;
+         profileImg: string;
+      }
+   ];
+   progress: boolean;
 }
