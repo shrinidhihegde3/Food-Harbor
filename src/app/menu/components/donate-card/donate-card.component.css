@@ -37,9 +37,9 @@ h5 {
 .col-md-9 {
   padding: 0;
 }
-.img {
-  height: 100%;
-  width: 100%;
+.donationImg {
+  height: 316px;
+  width: 628px;
 }
 .btn {
   background-color: transparent;

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Donation } from 'src/app/shared/models/models';
+import { MenuDonationService } from '../../menu-donation/services/menu-donation.service';
 
 @Component({
   selector: 'app-donate-card',
@@ -6,22 +8,15 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./donate-card.component.css']
 })
 export class DonateCardComponent {
-    @Input() progress: string | undefined;
     @Input() title: string | undefined;
-
-    @Input() description: string | undefined;
-    @Input() image: string | undefined;
-    @Input() special: string | undefined;
-    @Input() Quantity: string | undefined;
-    @Input() pickup: string | undefined;
-    @Input() expiry: string | undefined;
-    @Input() pickuptime: string | undefined;
+    @Input() donationData: any;
   
+    constructor(private _donationService: MenuDonationService) { }
 
     showMore: boolean = false;
     show(){
       this.showMore = !this.showMore;
-      console.log(this.acceptedBy[0]);
+      // console.log(this.acceptedBy[0]);
     }
-    @Input() acceptedBy: any | undefined;
+
 }
