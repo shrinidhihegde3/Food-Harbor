@@ -8,11 +8,13 @@ import { ComponentsModule } from './components/components.module';
 import { MenuDonationModule } from './menu-donation/menu-donation.module';
 import { MenuArticleModule } from './menu-article/menu-article.module';
 import { MenuOrganisationModule } from './menu-organisation/menu-organisation.module';
+import { HomeCardComponent } from './menu-home/home-card/home-card.component';
 
 
 @NgModule({
   declarations: [
     MenuHomeComponent,
+    HomeCardComponent,
     
   ],
   imports: [
